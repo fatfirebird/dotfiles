@@ -1,0 +1,33 @@
+# Dependencies
+node_modules
+
+# Lock files
+bun.lock
+package-lock.json
+yarn.lock
+
+# API keys and secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.secret
+credentials.*
+secrets.*
+
+# SSH keys
+id_rsa
+id_ed25519
+id_dsa
+*.ppk
+authorized_keys
+
+# Config files with API keys
+opencode.json
+**/opencode.json
+
+# Local settings
+settings.local.json
+**/.claude/settings.local.json
