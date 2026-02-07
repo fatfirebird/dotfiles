@@ -1,4 +1,3 @@
-local harpoon = require("harpoon")
 local fzf = require("fzf-lua")
 
 -- FZF
@@ -9,6 +8,7 @@ vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "FZF buffers" })
 vim.keymap.set("n", "<leader>fc", fzf.commands, { desc = "FZF find command" })
 vim.keymap.set("n", "<leader>fs", fzf.blines, { desc = "Fuzzy find in current buffer" })
 vim.keymap.set("n", "<leader>fy", fzf.registers, { desc = "Fuzzy find registers" })
+vim.keymap.set("n", "<leader>fm", fzf.marks, { desc = "Fuzzy find marks" })
 
 -- Neotree file
 vim.keymap.set("n", "<leader>b", ":Neotree filesystem reveal toggle left<CR>", { desc = "Neotree open left" })
@@ -47,35 +47,6 @@ vim.keymap.set("v", "<A-j>", ":move '>+1<CR>gv=gv", { desc = "Move selection dow
 vim.keymap.set("v", "<A-k>", ":move '<-2<CR>gv=gv", { desc = "Move selection up" })
 
 vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "Save file" })
-
--- Harpoon
-vim.keymap.set("n", "<leader>hm", function()
-  harpoon:list():add()
-end, { desc = "Harpoon file" })
-vim.keymap.set("n", "<leader>hf", function()
-  harpoon.ui:toggle_quick_menu(harpoon:list())
-end, { desc = "Harpoon menu" })
-vim.keymap.set("n", "<leader>1", function()
-  harpoon:list():select(1)
-end, { desc = "Harpoon file 1" })
-vim.keymap.set("n", "<leader>2", function()
-  harpoon:list():select(2)
-end, { desc = "Harpoon file 2" })
-vim.keymap.set("n", "<leader>3", function()
-  harpoon:list():select(3)
-end, { desc = "Harpoon file 3" })
-vim.keymap.set("n", "<leader>4", function()
-  harpoon:list():select(4)
-end, { desc = "Harpoon file 4" })
-vim.keymap.set("n", "<leader>5", function()
-  harpoon:list():select(5)
-end, { desc = "Harpoon file 5" })
-vim.keymap.set("n", "<leader>hp", function()
-  harpoon:list():prev()
-end, { desc = "Previous harpoon file" })
-vim.keymap.set("n", "<leader>hn", function()
-  harpoon:list():next()
-end, { desc = "Next harpoon file" })
 
 -- tmux navigator
 vim.keymap.set("n", "<c-h>", ":TmuxNavigateLeft<cr>", { desc = "tmux navigator left" })
