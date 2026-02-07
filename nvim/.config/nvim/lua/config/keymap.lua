@@ -27,6 +27,10 @@ vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
 vim.keymap.set("n", "<leader>wx", ":close<CR>", { desc = "Close current split" })
 vim.keymap.set("n", "<leader>wr", "<C-w>r", { desc = "Rotate splits" })
 
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", { desc = "Increase window height" })
+vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Increase window width" })
 
 -- Create tabs
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New tab" })

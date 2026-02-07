@@ -6,8 +6,10 @@ return {
   config = function()
     ---@type opencode.Opts
     vim.g.opencode_opts = {
-
       enabled = "native",
+      provider = {
+        enabled = "terminal",
+      }
     }
 
     -- Required for `opts.events.reload`.
