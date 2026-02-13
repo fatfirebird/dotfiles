@@ -6,9 +6,13 @@ return {
   config = function()
     ---@type opencode.Opts
     vim.g.opencode_opts = {
-      enabled = "native",
       provider = {
-        enabled = "terminal",
+        enabled = "tmux",
+        tmux = {
+          options = "-h -l 30%",
+          focus = true,
+          allow_passthrough = false,
+        },
       }
     }
 
