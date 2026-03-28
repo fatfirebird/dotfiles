@@ -130,3 +130,12 @@ end, { desc = "Treesitter Search" })
 vim.keymap.set("c", "<c-s>", function()
   require("flash").toggle()
 end, { desc = "Toggle Flash Search" })
+
+-- Open opencode in tmux
+vim.keymap.set('n', '<leader>ac', function()
+  vim.fn.jobstart({
+    'tmux', 'split-window', '-h', '-p', '30',
+    '-c', vim.fn.expand('%:p:h'),
+    'opencode'
+  })
+end)

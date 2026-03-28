@@ -38,21 +38,10 @@
   "agent": {
     "explore": {
       "temperature": 0.1,
-      "model": "anthropic/claude-haiku-4-5"
+      "model": "github-copilot/gpt-5-mini"
     }
   },
   "mcp": {
-    "FramelinkFigmaMCP": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "figma-developer-mcp",
-        "--figma-api-key={env:FIGMA_API_KEY}",
-        "--stdio"
-      ],
-      "enabled": true
-    },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
