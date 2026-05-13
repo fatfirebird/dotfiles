@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "FZF buffers" })
 vim.keymap.set("n", "<leader>fc", fzf.commands, { desc = "FZF find command" })
 vim.keymap.set("n", "<leader>fs", fzf.blines, { desc = "Fuzzy find in current buffer" })
 vim.keymap.set("n", "<leader>fy", fzf.registers, { desc = "Fuzzy find registers" })
+vim.keymap.set("n", '<leader>f"', fzf.registers, { desc = "Fuzzy find registers" })
 vim.keymap.set("n", "<leader>fm", fzf.marks, { desc = "Fuzzy find marks" })
 
 -- Neotree file
@@ -44,14 +45,6 @@ vim.keymap.set("n", "<leader>t3", "3gt", { desc = "Go to tab 3" })
 vim.keymap.set("n", "<leader>t4", "4gt", { desc = "Go to tab 4" })
 vim.keymap.set("n", "<leader>t5", "5gt", { desc = "Go to tab 5" })
 
--- Move lines like in vscode
-vim.keymap.set("n", "<A-j>", ":move .+1<CR>==", { desc = "Move line down" })
-vim.keymap.set("n", "<A-k>", ":move .-2<CR>==", { desc = "Move line up" })
-vim.keymap.set("v", "<A-j>", ":move '>+1<CR>gv=gv", { desc = "Move selection down" })
-vim.keymap.set("v", "<A-k>", ":move '<-2<CR>gv=gv", { desc = "Move selection up" })
-
-vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "Save file" })
-
 -- tmux navigator
 vim.keymap.set("n", "<c-h>", ":TmuxNavigateLeft<cr>", { desc = "tmux navigator left" })
 vim.keymap.set("n", "<c-j>", ":TmuxNavigateDown<cr>", { desc = "tmux navigator down" })
@@ -61,9 +54,6 @@ vim.keymap.set("n", "<c-\\>", ":TmuxNavigatePrevious<cr>", { desc = "tmux naviga
 
 -- Terminal
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-
--- oil
-vim.keymap.set("n", "-", ":Oil --float<CR>", { desc = "Oil" })
 
 -- Use LspAttach autocommand to only map the following keys
 vim.api.nvim_create_autocmd("LspAttach", {
