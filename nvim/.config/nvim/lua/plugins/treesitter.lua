@@ -28,7 +28,7 @@ return {
       "json",
       "yaml",
       "bash",
-      "regex"
+      "regex",
       -- ... your parsers
     }
     local alreadyInstalled = require('nvim-treesitter.config').get_installed()

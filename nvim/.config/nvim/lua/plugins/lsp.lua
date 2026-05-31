@@ -19,6 +19,7 @@ return {
           "jsonls",
           "yamlls",
           "css_variables",
+          "marksman",
         },
       })
     end,
@@ -33,6 +34,7 @@ return {
       vim.lsp.enable("jsonls")
       vim.lsp.enable("yamlls")
       vim.lsp.enable("biome")
+      vim.lsp.enable("marksman")
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
