@@ -10,7 +10,7 @@ return {
       markdown = {
         enabled = true,
         clear_in_insert_mode = true,
-        only_render_image_at_cursor = false,
+        only_render_image_at_cursor = true,
         resolve_image_path = function(document_path, image_path, fallback)
           local vault_root = vim.fn.expand("~/Documents/Obsidian Vault")
           if vim.startswith(document_path, vault_root) then
