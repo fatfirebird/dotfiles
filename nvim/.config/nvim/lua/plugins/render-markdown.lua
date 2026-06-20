@@ -26,7 +26,6 @@ return {
           'RenderMarkdownH5',
           'RenderMarkdownH6',
         },
-        icons = { '󰼏  ' }
       },
       -- anti_conceal = { enabled = false },
       render_modes = true

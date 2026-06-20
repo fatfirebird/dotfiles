@@ -1,4 +1,5 @@
 local fzf = require("fzf-lua")
+local zk = require("zk.commands")
 
 -- FZF
 vim.keymap.set("n", "<leader>p", fzf.files, { desc = "FZF find files" })
@@ -88,7 +89,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts)
 
     -- Other
-    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+    vim.keymap.set("n", "<leader>k", vim.lsp.buf.signature_help, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
     vim.keymap.set({ "n", "v" }, "<leader>.", vim.lsp.buf.code_action, opts)
@@ -129,3 +130,11 @@ vim.keymap.set('n', '<leader>ac', function()
     'opencode'
   })
 end)
+
+
+-- Zk
+vim.keymap.set("n", "<leader>fzn", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", { desc = "Zk find notes" })
+vim.keymap.set("n", "<leader>fzt", "<Cmd>ZkTags<CR>", { desc = "Zk find tags" })
+vim.keymap.set("n", "<leader>fzl", "<Cmd>ZkLinks<CR>", { desc = "Zk find links" })
+vim.keymap.set("n", "<leader>znt", "<Cmd>ZkNew<CR>", { desc = "Zk new note" })
+vim.keymap.set("n", "<leader>zl", "<Cmd>ZkInsertLink<CR>", { desc = "Zk insert link" })
