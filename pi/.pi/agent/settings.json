@@ -1,0 +1,50 @@
+{
+  "lastChangelogVersion": "0.82.1",
+  "theme": "gruvbox-material",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-luna",
+  "defaultThinkingLevel": "low",
+  "hideThinkingBlock": false,
+  "packages": [
+    "npm:pi-mcp-adapter",
+    "npm:pi-web-access",
+    {
+      "source": "npm:pi-lens",
+      "extensions": [
+        "+dist/index.js"
+      ]
+    },
+    "npm:pi-subagents",
+    "npm:@narumitw/pi-goal",
+    {
+      "source": "npm:@juicesharp/rpiv-ask-user-question",
+      "extensions": [
+        "+index.ts"
+      ]
+    },
+    {
+      "source": "npm:@quintinshaw/pi-dynamic-workflows",
+      "skills": [
+        "+skills/workflow-patterns/SKILL.md",
+        "-skills/workflow-authoring/SKILL.md"
+      ]
+    },
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@narumitw/pi-plan-mode",
+    "npm:@tmustier/pi-usage-extension",
+    "npm:pi-hermes-memory",
+    "npm:@zigai/pi-footer"
+  ],
+  "enableInstallTelemetry": false,
+  "quietStartup": false,
+  "extensions": [
+    "+extensions/review.ts"
+  ],
+  "themes": [
+    "+themes/gruvbox-material.json"
+  ],
+  "treeFilterMode": "all",
+  "doubleEscapeAction": "tree",
+  "defaultProjectTrust": "ask",
+  "powerline": "compact"
+}

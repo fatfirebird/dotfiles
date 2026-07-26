@@ -37,6 +37,7 @@ set $recording-stop $ipc toast send '{"title": "Recording", "body": "Stopped", "
 # swaymsg -t get_outputs
 
 output HDMI-A-1 scale 2 mode 3840x2160@160Hz
+output DP-2 scale 2 mode 3840x2160@160Hz
 output eDP-1 scale 2 mode 2880x1800@120Hz
 
 # Clamshell Mode
