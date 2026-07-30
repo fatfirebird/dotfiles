@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.82.1",
   "theme": "gruvbox-material",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-luna",
+  "defaultModel": "gpt-5.6-sol",
   "defaultThinkingLevel": "low",
   "hideThinkingBlock": false,
   "packages": [
@@ -15,18 +15,14 @@
       ]
     },
     "npm:pi-subagents",
-    "npm:@narumitw/pi-goal",
+    {
+      "source": "npm:@narumitw/pi-goal",
+      "extensions": []
+    },
     {
       "source": "npm:@juicesharp/rpiv-ask-user-question",
       "extensions": [
         "+index.ts"
-      ]
-    },
-    {
-      "source": "npm:@quintinshaw/pi-dynamic-workflows",
-      "skills": [
-        "+skills/workflow-patterns/SKILL.md",
-        "-skills/workflow-authoring/SKILL.md"
       ]
     },
     "npm:@juicesharp/rpiv-todo",
@@ -37,9 +33,7 @@
   ],
   "enableInstallTelemetry": false,
   "quietStartup": false,
-  "extensions": [
-    "+extensions/review.ts"
-  ],
+  "extensions": [],
   "themes": [
     "+themes/gruvbox-material.json"
   ],

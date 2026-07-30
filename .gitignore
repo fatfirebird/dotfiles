@@ -34,6 +34,8 @@ pi/.pi/agent/*
 !pi/.pi/agent/mcp.json
 !pi/.pi/agent/extensions/
 !pi/.pi/agent/extensions/**
+!pi/.pi/agent/skills/
+!pi/.pi/agent/skills/**
 !pi/.pi/agent/extension-settings/
 !pi/.pi/agent/extension-settings/**
 !pi/.pi/agent/themes/
