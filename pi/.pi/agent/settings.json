@@ -28,7 +28,8 @@
     "npm:@juicesharp/rpiv-todo",
     "npm:@narumitw/pi-plan-mode",
     "npm:@tmustier/pi-usage-extension",
-    "npm:pi-hermes-memory"
+    "npm:pi-hermes-memory",
+    "npm:pi-rtk-optimizer"
   ],
   "enableInstallTelemetry": false,
   "quietStartup": false,
