@@ -2,9 +2,51 @@
   "lastChangelogVersion": "0.82.1",
   "theme": "gruvbox-material",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-luna",
-  "defaultThinkingLevel": "minimal",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "medium",
   "hideThinkingBlock": false,
+  "subagents": {
+    "defaultModel": "openai-codex/gpt-5.6-luna",
+    "defaultThinking": "high",
+    "agentOverrides": {
+      "delegate": {
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "high"
+      },
+      "scout": {
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "medium"
+      },
+      "researcher": {
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "high"
+      },
+      "context-builder": {
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "xhigh"
+      },
+      "planner": {
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "high"
+      },
+      "reviewer": {
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "high"
+      },
+      "oracle": {
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "high"
+      },
+      "advisor": {
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "high"
+      },
+      "worker": {
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "xhigh"
+      }
+    }
+  },
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:pi-web-access",
@@ -26,11 +68,11 @@
       ]
     },
     "npm:@juicesharp/rpiv-todo",
-    "npm:@narumitw/pi-plan-mode",
     "npm:@tmustier/pi-usage-extension",
     "npm:pi-hermes-memory",
     "npm:pi-rtk-optimizer",
-    "npm:pi-agent-browser-native"
+    "npm:pi-agent-browser-native",
+    "npm:@gotgenes/pi-permission-system"
   ],
   "enableInstallTelemetry": false,
   "quietStartup": false,
