@@ -1,0 +1,19 @@
+{
+  "ignore": [
+    "**/node_modules/**",
+    "**/build/**",
+    "**/dist/**",
+    "**/coverage/**",
+    "storybook-static/**",
+    "tests-output/**",
+    "**/.swc/**",
+    "**/*.snap"
+  ],
+  "widget": {
+    "visible": false
+  },
+  "maxProjectFiles": 15000,
+  "reviewGraph": {
+    "maxFiles": 12000
+  }
+}
