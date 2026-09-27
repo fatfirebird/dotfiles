@@ -270,7 +270,7 @@ bindsym $mod+r mode "resize"
 
 
 # Autostart applications
-exec qs -c noctalia-shell
+exec noctalia
 
 
 ### styles
