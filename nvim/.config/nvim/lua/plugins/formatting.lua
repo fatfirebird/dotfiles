@@ -6,11 +6,11 @@ return {
 
     conform.setup({
       formatters_by_ft = {
-        javascript = { "prettier", lsp_format = "fallback" },
-        typescript = { "prettier", lsp_format = "fallback" },
-        javascriptreact = { "prettier", lsp_format = "fallback" },
-        typescriptreact = { "prettier", lsp_format = "fallback" },
-        svelte = { "prettier", lsp_format = "fallback" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        svelte = { "prettier" },
         css = { "prettier", "stylelint" },
         scss = { "stylelint" },
         html = { "prettier" },
@@ -21,10 +21,10 @@ return {
         liquid = { "prettier" },
         lua = { "stylua" },
       },
-      format_after_save = {
+      -- Format before writing once; do not fall back to ESLint/LSP formatting.
+      format_on_save = {
         timeout_ms = 500,
-        lsp_format = "fallback",
-        -- async = false,
+        lsp_format = "never",
       },
       formatters = {
         prettier = {

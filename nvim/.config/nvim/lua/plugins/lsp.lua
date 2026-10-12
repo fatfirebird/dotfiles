@@ -13,7 +13,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "ts_ls",
+          "tsc",
           "html",
           "cssls",
           "jsonls",
@@ -28,23 +28,13 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       vim.lsp.enable("lua_ls")
-      vim.lsp.enable("ts_ls")
+      vim.lsp.enable("tsc")
       vim.lsp.enable("html")
       vim.lsp.enable("cssls")
       vim.lsp.enable("jsonls")
       vim.lsp.enable("yamlls")
       vim.lsp.enable("biome")
       vim.lsp.enable("marksman")
-
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
-        callback = function()
-          vim.lsp.buf.code_action({
-            context = { only = { "source.fixAll.eslint" } },
-            apply = true,
-          })
-        end,
-      })
     end,
   },
 }

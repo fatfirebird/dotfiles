@@ -6,11 +6,11 @@ set $up k
 set $right l
 set $term kitty
 
-# noctalia-shell ipc
-set $ipc qs -c noctalia-shell ipc call
+# Noctalia v5 IPC
+set $ipc noctalia msg
 
-set $menu $ipc launcher toggle
-set $lock $ipc sessionMenu lockAndSuspend
+set $menu $ipc panel-toggle launcher
+set $lock $ipc session lock-and-suspend
 
 
 # screenshots
@@ -23,12 +23,12 @@ set $screenshot grim -g "$(slurp -o -r -c '#ff0000ff')" -t ppm - | satty --filen
   --initial-tool "crop"
 
 # screen recording
-set $recording-start $ipc toast send '{"title": "Recording", "body": "Started", "icon": "media-record"}' && wf-recorder -g "$(slurp)" \
+set $recording-start $ipc notification-show Recording Started && wf-recorder -g "$(slurp)" \
   -c h264_vaapi -d /dev/dri/renderD128 \
   -p quality=5 \
   -f ~/Videos/Screencasts/vaapi_screencast-$(date +%Y%m%d_%H%M%S).mp4
 
-set $recording-stop $ipc toast send '{"title": "Recording", "body": "Stopped", "icon": "media-record"}' && pkill -SIGINT wf-recorder
+set $recording-stop $ipc notification-show Recording Stopped && pkill -SIGINT wf-recorder
 
 
 ### Output configuration
