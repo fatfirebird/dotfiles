@@ -2,8 +2,8 @@
   "lastChangelogVersion": "0.82.1",
   "theme": "gruvbox-material",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-luna",
-  "defaultThinkingLevel": "medium",
+  "defaultModel": "gpt-6-luna",
+  "defaultThinkingLevel": "off",
   "hideThinkingBlock": false,
   "subagents": {
     "defaultModel": "openai-codex/gpt-5.6-luna",
@@ -56,7 +56,24 @@
         "+dist/index.js"
       ]
     },
-    "npm:pi-subagents",
+    {
+      "source": "npm:pi-subagents",
+      "extensions": [
+        "-index.ts"
+      ],
+      "skills": [
+        "-skills/pi-subagents/SKILL.md"
+      ],
+      "prompts": [
+        "-prompts/gather-context-and-clarify.md",
+        "-prompts/parallel-cleanup.md",
+        "-prompts/parallel-context-build.md",
+        "-prompts/parallel-handoff-plan.md",
+        "-prompts/parallel-research.md",
+        "-prompts/parallel-review.md",
+        "-prompts/review-loop.md"
+      ]
+    },
     {
       "source": "npm:@narumitw/pi-goal",
       "extensions": []
@@ -71,8 +88,19 @@
     "npm:@tmustier/pi-usage-extension",
     "npm:pi-hermes-memory",
     "npm:pi-rtk-optimizer",
-    "npm:pi-agent-browser-native",
-    "npm:@gotgenes/pi-permission-system"
+    {
+      "source": "npm:pi-agent-browser-native",
+      "extensions": [
+        "-dist/extensions/agent-browser/index.js"
+      ]
+    },
+    {
+      "source": "npm:@gotgenes/pi-permission-system",
+      "extensions": [
+        "-src/index.ts"
+      ]
+    },
+    "npm:pi-context"
   ],
   "enableInstallTelemetry": false,
   "quietStartup": false,
