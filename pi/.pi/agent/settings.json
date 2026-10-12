@@ -1,9 +1,9 @@
 {
-  "lastChangelogVersion": "0.82.1",
+  "lastChangelogVersion": "1.1.0",
   "theme": "gruvbox-material",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-6-luna",
-  "defaultThinkingLevel": "off",
+  "defaultThinkingLevel": "low",
   "hideThinkingBlock": false,
   "subagents": {
     "defaultModel": "openai-codex/gpt-5.6-luna",
@@ -48,7 +48,12 @@
     }
   },
   "packages": [
-    "npm:pi-mcp-adapter",
+    {
+      "source": "npm:pi-mcp-adapter",
+      "extensions": [
+        "-index.ts"
+      ]
+    },
     "npm:pi-web-access",
     {
       "source": "npm:pi-lens",
@@ -59,19 +64,22 @@
     {
       "source": "npm:pi-subagents",
       "extensions": [
-        "-index.ts"
+        "-index.ts",
+        "-index.js"
       ],
       "skills": [
-        "-skills/pi-subagents/SKILL.md"
+        "-skills/pi-subagents/SKILL.md",
+        "-skills/council-mode/SKILL.md"
       ],
       "prompts": [
-        "-prompts/gather-context-and-clarify.md",
-        "-prompts/parallel-cleanup.md",
         "-prompts/parallel-context-build.md",
         "-prompts/parallel-handoff-plan.md",
-        "-prompts/parallel-research.md",
+        "-prompts/review-loop.md",
         "-prompts/parallel-review.md",
-        "-prompts/review-loop.md"
+        "-prompts/parallel-research.md",
+        "-prompts/parallel-cleanup.md",
+        "-prompts/gather-context-and-clarify.md",
+        "-prompts/council.md"
       ]
     },
     {
@@ -105,7 +113,8 @@
   "enableInstallTelemetry": false,
   "quietStartup": false,
   "extensions": [
-    "+extensions/footer.ts"
+    "+extensions/footer.ts",
+    "+builtin:mcp"
   ],
   "themes": [
     "+themes/gruvbox-material.json"
