@@ -48,43 +48,12 @@
     }
   },
   "packages": [
-    {
-      "source": "npm:pi-mcp-adapter",
-      "extensions": [
-        "-index.ts"
-      ]
-    },
     "npm:pi-web-access",
     {
       "source": "npm:pi-lens",
       "extensions": [
         "+dist/index.js"
       ]
-    },
-    {
-      "source": "npm:pi-subagents",
-      "extensions": [
-        "-index.ts",
-        "-index.js"
-      ],
-      "skills": [
-        "-skills/pi-subagents/SKILL.md",
-        "-skills/council-mode/SKILL.md"
-      ],
-      "prompts": [
-        "-prompts/parallel-context-build.md",
-        "-prompts/parallel-handoff-plan.md",
-        "-prompts/review-loop.md",
-        "-prompts/parallel-review.md",
-        "-prompts/parallel-research.md",
-        "-prompts/parallel-cleanup.md",
-        "-prompts/gather-context-and-clarify.md",
-        "-prompts/council.md"
-      ]
-    },
-    {
-      "source": "npm:@narumitw/pi-goal",
-      "extensions": []
     },
     {
       "source": "npm:@juicesharp/rpiv-ask-user-question",
@@ -100,12 +69,6 @@
       "source": "npm:pi-agent-browser-native",
       "extensions": [
         "-dist/extensions/agent-browser/index.js"
-      ]
-    },
-    {
-      "source": "npm:@gotgenes/pi-permission-system",
-      "extensions": [
-        "-src/index.ts"
       ]
     },
     "npm:pi-context"
