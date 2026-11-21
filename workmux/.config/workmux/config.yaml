@@ -1,0 +1,36 @@
+agent: pi
+worktree_dir: .worktrees 
+window_prefix: "{project}-"
+nerdfont: true
+mode: session
+
+panes:
+  - focus: true
+  - split: horizontal
+    command: <agent>
+
+
+status_icons:
+  working: "\uF110"
+  waiting: "#[fg=#d8a657]\uF075#[fg=default]"
+  done: "#[fg=#a9b665]\uF00C#[fg=default]"
+
+theme:
+  mode: dark
+  custom:
+    current_row_bg: "#3c3836"
+    highlight_row_bg: "#504945"
+    current_worktree_fg: "#e78a4e"
+    dimmed: "#928374"
+    text: "#d4be98"
+    border: "#665c54"
+    help_border: "#7daea3"
+    help_muted: "#a89984"
+    header: "#d8a657"
+    keycap: "#d3869b"
+    info: "#7daea3"
+    success: "#a9b665"
+    warning: "#d8a657"
+    danger: "#ea6962"
+    accent: "#89b482"
+

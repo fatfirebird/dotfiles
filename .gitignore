@@ -40,3 +40,6 @@ pi/.pi/agent/*
 !pi/.pi/agent/extension-settings/**
 !pi/.pi/agent/themes/
 !pi/.pi/agent/themes/**
+
+# worktrees
+.worktrees
