@@ -1,0 +1,13 @@
+theme = "gruvbox-dark"
+diff_view = "side-by-side"
+show_reviewed = true
+
+[export]
+intro = "Check the comments"
+scope_line = false
+comments_header = ""
+remote_comments_header = ""
+session_header = false
+
+[forge]
+comment_type_prefix = false
